@@ -29,7 +29,7 @@ class Tests {
     Vector3f ans2 = new Vector3f(3, 4, 5);
 
     Vector3f v7 = new Vector3f(3, 6, 9);
-    Vector3f v8 = new Vector3f(1, 2, 3);
+    Vector3f v8 = new Vector3f(0.26726124F, 0.5345225F, 0.80178374F);
 
     @Test
     @DisplayName("determinant")

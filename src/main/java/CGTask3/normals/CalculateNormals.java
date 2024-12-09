@@ -7,6 +7,7 @@ import CGTask3.model.Polygon;
 import java.util.*;
 
 public class CalculateNormals {
+    private static final float EPS = 1e-7f;
     //Bx-Ax, By-Ay, Bz-Az
     public static Vector3f calculateVectorByDots(Vector3f a, Vector3f b) {
         return new Vector3f(b.getX()-a.getX(), b.getY()-a.getY(), b.getZ()-a.getZ());
@@ -78,17 +79,11 @@ public class CalculateNormals {
         return normalize(vectorNormal);
     }
     public static Vector3f normalize(Vector3f vector) {
-        float coefficient = 0;
-        if (vector.getX() != 0) {
-            coefficient = 1/vector.getX();
-        } else if (vector.getY() != 0) {
-            coefficient = 1/vector.getY();
-        } else if (vector.getZ() != 0) {
-            coefficient = 1/vector.getZ();
-        }
-        float newX = vector.getX() * coefficient;
-        float newY = vector.getY() * coefficient;
-        float newZ = vector.getZ() * coefficient;
+
+        float l = (float) Math.sqrt(Math.pow(vector.getX(), 2) + Math.pow(vector.getY(), 2) + Math.pow(vector.getZ(), 2));
+        float newX = vector.getX() / l;
+        float newY = vector.getY() / l;
+        float newZ = vector.getZ() / l;
 
         return new Vector3f(newX, newY, newZ);
     }
