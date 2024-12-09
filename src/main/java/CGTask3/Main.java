@@ -8,11 +8,11 @@ import CGTask3.objreader.ObjReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Path fileName = Path.of("C:\\Users\\Nick\\IdeaProjects\\OOP_6_group_template-main\\src\\main\\java\\CGTask3\\objfolder\\caracal_cube.obj");
+        Path fileName = Path.of("C:\\Users\\Nick\\IdeaProjects\\OOP_6_group_template-main\\src\\main\\java\\CGTask3\\objfolder\\myBrick.obj");
         String fileContent = Files.readString(fileName);
 
         System.out.println("Loading model ...");

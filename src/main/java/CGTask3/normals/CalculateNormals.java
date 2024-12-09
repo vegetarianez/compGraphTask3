@@ -45,7 +45,7 @@ public class CalculateNormals {
             dots[1] = dot2;
             dots[2] = dot3;
             polygonNormals.add(calculateNormalOfPolygon(dots));
-        }
+        }//123
 
         Map<Integer, LinkedList<Vector3f>> vertexPolygonsMap = new HashMap<>();
         for (int i = 0; i < polygons.size(); i++) {
