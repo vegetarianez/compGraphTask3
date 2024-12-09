@@ -15,7 +15,7 @@ public class CalculateNormals {
         return new Vector3f(a.getY() * b.getZ() - b.getY() * a.getZ(), -a.getX() * b.getZ() + b.getX() * a.getZ(), a.getX() * b.getY() - b.getX() * a.getY());
     }
     public static double determinant(Vector3f a, Vector3f b, Vector3f c) {
-        return a.getX() * (b.getY() * c.getZ()) - a.getY() * (b.getX() * c.getZ() - c.getX() * b.getZ()) + a.getZ() * (b.getX() * c.getY() - c.getX() * b.getY());
+        return a.getX() * (b.getY() * c.getZ() - b.getZ() * c.getY()) - a.getY() * (b.getX() * c.getZ() - b.getZ() * c.getX()) + a.getZ() * (b.getX() * c.getY() - b.getY() * c.getX());
     }
 
 
