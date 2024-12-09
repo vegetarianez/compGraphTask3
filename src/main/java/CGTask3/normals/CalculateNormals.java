@@ -26,7 +26,7 @@ public class CalculateNormals {
         if (determinant(a, b, c) < 0) {
             c = vectorMultiply(b, a);
         }
-        return c;
+        return normalize(c);
     }
 
     public static ArrayList<Vector3f> calculateNormals(Model model) {
@@ -78,10 +78,14 @@ public class CalculateNormals {
         return normalize(vectorNormal);
     }
     public static Vector3f normalize(Vector3f vector) {
-        if (vector.getX() == 0) {
-            return new Vector3f(0, 0, 0);
+        float coefficient = 0;
+        if (vector.getX() != 0) {
+            coefficient = 1/vector.getX();
+        } else if (vector.getY() != 0) {
+            coefficient = 1/vector.getY();
+        } else if (vector.getZ() != 0) {
+            coefficient = 1/vector.getZ();
         }
-        float coefficient = 1/vector.getX();
         float newX = vector.getX() * coefficient;
         float newY = vector.getY() * coefficient;
         float newZ = vector.getZ() * coefficient;

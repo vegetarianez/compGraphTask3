@@ -46,7 +46,7 @@ class Tests {
         assertEquals(a.getZ(), ans1.getZ());
 
     }
-
+//возможность записывать анимации
     @Test
     @DisplayName("vector multiply")
     public void vectorMultiply() {
@@ -70,7 +70,6 @@ class Tests {
     public void Normalization() {
         assertEquals(CalculateNormals.normalize(v7).getY(), v8.getY());
         assertEquals(CalculateNormals.normalize(v7).getX(), v8.getX());
-
         assertEquals(CalculateNormals.normalize(v7).getZ(), v8.getZ());
     }
 
