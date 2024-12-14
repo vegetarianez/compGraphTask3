@@ -84,7 +84,6 @@ public class CalculateNormals {
         float newX = vector.getX() / l;
         float newY = vector.getY() / l;
         float newZ = vector.getZ() / l;
-
         return new Vector3f(newX, newY, newZ);
     }
 }
